@@ -1,0 +1,11 @@
+-- creating a table in my christian_literature database called books
+CREATE table books(
+    ID int(5),
+  title varchar(50),
+  category varchar(20),
+  year_of_release int(4),
+  author varchar (50)
+);
+-- checking the fields in my books table
+SELECT *
+FROM books;
