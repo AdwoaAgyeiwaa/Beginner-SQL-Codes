@@ -1,0 +1,75 @@
+-- creating a table in my christian_literature database called books
+CREATE table books(
+    ID int(5),
+  title varchar(50),
+  category varchar(20),
+  year_of_release int(4),
+  author varchar (50)
+);
+
+-- adding an average rating column
+ALTER TABLE books
+    ADD avg_rating float(5);
+    
+-- checking the fields in my books table
+SELECT *
+FROM books;
+
+/*
+inserting records into fields
+1. All Joseph Prince books
+*/
+INSERT INTO books
+VALUES(1,'Destined to Reign','Faith',2007,'Joseph Prince',4.53);
+INSERT INTO books
+VALUES(2,'Unmerited Favour','Faith',2010,'Joseph Prince',4.60);
+INSERT INTO books
+VALUES(3,'The Power of Right Believing','Faith',2013,'Joseph Prince',4.61);
+INSERT INTO books
+VALUES(4,'Grace Revolution','Grace',2015,'Joseph Prince',4.63);
+INSERT INTO books
+VALUES(5,'Health and Wholeness Through the Holy Communion','Healing',2011,'Joseph Prince',4.69);
+INSERT INTO books
+VALUES(6,'Healing Promises','Healing',2011,'Joseph Prince',4.69);
+INSERT INTO books
+VALUES(7,'Prayer of Protection','Protection',2016,'Joseph Prince',4.58);
+INSERT INTO books
+VALUES(8,'Anchored','Faith',NULL,'Joseph Prince',4.16);
+
+/*
+just realised that I had no primary key in my table
+making ID the primary key
+*/
+ALTER TABLE books
+ADD PRIMARY KEY(ID);
+
+/*
+1. changing year_of_release field to publication_date
+2. changing datatype of punblication_date field
+3. making some changes in records of ID: 2 and ID: 8
+*/
+ALTER TABLE books
+RENAME COLUMN year_of_release TO publication_date;
+
+ALTER TABLE books
+MODIFY publication_date year(4);
+
+UPDATE books
+SET publication_date = '2018'
+WHERE ID = 8;
+
+--continuing insertion of Joseph Prince books into database
+INSERT INTO books
+VALUES(9,'Live the Let-Go Life','Faith',2017,'Joseph Prince',4.61);
+INSERT INTO books
+VALUES(10,'Destined to Reign Devotional','Devotional',2008,'Joseph Prince',4.75);
+INSERT INTO books
+VALUES(11,'Spiritual Warfare','Warfare',2005,'Joseph Prince',4.62);
+INSERT INTO books
+VALUES(12,'100 Days of Favour','Favour',2011,'Joseph Prince',4.61);
+INSERT INTO books
+VALUES(13,'Provision Promises','Provision',2012,'Joseph Prince',4.69);
+INSERT INTO books
+VALUES(14,'Eat Your Way to Life and Health','Healing',2019,'Joseph Prince',4.61);
+INSERT INTO books
+VALUES(15,'Your Miracle Is In Your Mouth','Confession',2005,'Joseph Prince',4.57);
