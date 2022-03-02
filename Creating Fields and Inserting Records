@@ -17,7 +17,7 @@ FROM books;
 
 /*
 inserting records into fields
-1. All Joseph Prince books
+1. Joseph Prince books
 */
 INSERT INTO books
 VALUES(1,'Destined to Reign','Faith',2007,'Joseph Prince',4.53);
@@ -73,3 +73,17 @@ INSERT INTO books
 VALUES(14,'Eat Your Way to Life and Health','Healing',2019,'Joseph Prince',4.61);
 INSERT INTO books
 VALUES(15,'Your Miracle Is In Your Mouth','Confession',2005,'Joseph Prince',4.57);
+INSERT INTO books
+VALUES(16,'Right Place, Right Time','Favour',2008,'Joseph Prince',4.70);
+INSERT INTO books
+VALUES(17,'Grace Revolution Study Guide','Grace',2016,'Joseph Prince',5.00);
+INSERT INTO books
+VALUES(18,'No More Mind Games','Warfare',2019,'Joseph Prince',4.30);
+INSERT INTO books
+VALUES(19,'The Benjamin Generation','End Times',2011,'Joseph Prince',4.64);
+INSERT INTO books
+VALUES(20,'100 Days of Right Believing','Faith',2014,'Joseph Prince',4.67);
+INSERT INTO books
+VALUES(21,'A Life Worth Living','Christian Life',2005,'Joseph Prince',4.60);
+
+-- 2. Rick Joyner books
