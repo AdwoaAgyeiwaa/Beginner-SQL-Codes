@@ -1,5 +1,5 @@
 -- creating a table in my christian_literature database called books
-CREATE table books(
+CREATE TABLE books(
     ID int(5),
   title varchar(50),
   category varchar(20),
