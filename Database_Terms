@@ -1,0 +1,13 @@
+Primary Key
+A Primary Key is a column of a table or a set of columns that helps to identify every record present in that table uniquely. There can be only one Primary Key in a table. The Primary Key cannot have the same values repeating for any row. Every value of the Primary Key has to be different with no repetitions.
+The PRIMARY KEY constraint put on a column or set of columns will not allow them to have any null values or any duplicates. One table can have only one primary key constraint. Any value in the Primary Key cannot be changed by any foreign keys which refer to it.
+
+Foreign Key
+Foreign Key is used to establish relationships between two tables. A foreign key will require each value in a column or set of columns to match the Primary Key of the referential table. Foreign keys help to maintain data and referential integrity.
+
+Composite Key
+Composite Key is a set of two or more attributes that help identify each tuple in a table uniquely. The attributes in the set may not be unique when considered separately. However, when taken all together, they will ensure uniqueness.
+
+Natural Key
+
+Surrogate Key
