@@ -20,3 +20,24 @@ WHERE
 ORDER BY
  column_name DESC or ASC;
  ```
+# Filtering Data
+## Filtering out a column of data
+```
+SELECT
+ column_name
+FROM 
+ table
+WHERE
+ column_name = "condition";
+```
+## Filtering out multiple columns of data
+```
+SELECT
+ column_name
+FROM 
+ table
+WHERE
+ column_name1 = "condition"
+AND
+ column_name2 = "condition";
+```
