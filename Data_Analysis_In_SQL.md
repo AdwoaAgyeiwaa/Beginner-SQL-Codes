@@ -41,3 +41,13 @@ WHERE
 AND
  column_name2 = "condition";
 ```
+## Filtering out a range of data within a column
+We can use the `BETWEEN` and `AND` commands to filter out ranges of values:
+```
+SELECT
+ column_name
+FROM 
+ table
+WHERE
+ column_name1 BETWEEN 'condition1' AND 'condition2';
+```
