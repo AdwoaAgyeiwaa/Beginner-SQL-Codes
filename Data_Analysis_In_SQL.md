@@ -51,3 +51,11 @@ FROM
 WHERE
  column_name1 BETWEEN 'condition1' AND 'condition2';
 ```
+# Combining Multiple TextStrings
+We can use `CONCAT` to pull and concatenate data from different columns:
+```
+SELECT
+ column_name
+FROM 
+ table
+```
