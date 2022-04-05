@@ -55,7 +55,7 @@ WHERE
 We can use `CONCAT` to pull and concatenate data from different columns:
 ```
 SELECT
- column_name
+ CONCAT(column_name1,column_name2) AS column_name3
 FROM 
  table
 ```
