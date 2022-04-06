@@ -119,3 +119,47 @@ ON
 We use the `GROUP BY` command to group rows that have the same values into summary rows, such as "find the number of customers in each country".<br>
 The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.<br>
 The GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.
+```
+SELECT 
+  column_name(s)
+FROM 
+  table_name
+WHERE
+  condition
+GROUP BY
+  column_name(s)
+ORDER BY
+  column_name(s);
+```
+
+## Counting Data
+### Counting all non-null values using `COUNT`
+The `COUNT` aggregate function is used to determine the number of rows in the output. It returns the number of rows that matches a specified criterion in the WHERE clause including duplicate data. It eliminates the NULL values in the output but does not eliminate duplicates of data.
+```
+SELECT
+  COUNT(column_name) AS alias_name
+FROM
+  table_name
+WHERE
+  condition;
+```
+## Counting only unique values using `COUNT(DISTINCT)`
+`COUNT(DISTINCT)` returns the distinct number of rows after satisfying conditions specified in the WHERE clause. It gives a distinct number of rows after eliminating NULL and duplicate values. It eliminates the NULL and duplicate values in the output.
+```
+SELECT
+  COUNT(DISTINCT column_name) AS alias_name
+FROM
+  table_name
+WHERE
+  condition;
+```
+### Counting all number of rows using `COUNT(*)`
+The `COUNT(*)` command returns the total number of rows after satisfying conditions specified in the where clause. It considers all rows regardless of any duplicate, NULL values. It does not eliminate the NULL values in the output.
+```
+SELECT
+  COUNT(*)
+FROM
+  table_name
+WHERE
+  condition;
+```
