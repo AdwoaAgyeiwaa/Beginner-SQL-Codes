@@ -143,7 +143,7 @@ FROM
 WHERE
   condition;
 ```
-## Counting only unique values using `COUNT(DISTINCT)`
+### Counting only unique values using `COUNT(DISTINCT)`
 `COUNT(DISTINCT)` returns the distinct number of rows after satisfying conditions specified in the WHERE clause. It gives a distinct number of rows after eliminating NULL and duplicate values. It eliminates the NULL and duplicate values in the output.
 ```
 SELECT
