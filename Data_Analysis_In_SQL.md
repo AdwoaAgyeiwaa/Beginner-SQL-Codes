@@ -91,7 +91,7 @@ ON
 ```
 
 ## `RIGHT JOIN`
-A right JOIN function returns all records from the right table and only the matched records from the left table. The table mentioned first is right and the table mentioned second is left. We can also think of right as a table name to the right of the JOIN statement and left as a table name to the left of the JOIN statement. RIGHT JOIN is the exact opposite of LEFT JOIN. You can get the same results if you flip the order of the tables and use a LEFT JOIN.
+A RIGHT JOIN function returns all records from the right table and only the matched records from the left table. The table mentioned first is right and the table mentioned second is left. We can also think of right as a table name to the right of the JOIN statement and left as a table name to the left of the JOIN statement. RIGHT JOIN is the exact opposite of LEFT JOIN. You can get the same results if you flip the order of the tables and use a LEFT JOIN.
 ```
 SELECT
   table1.column_name1 AS new_column_name1,
