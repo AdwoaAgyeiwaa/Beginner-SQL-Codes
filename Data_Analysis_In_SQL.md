@@ -105,7 +105,7 @@ ON
 ```
 
 ## `FULL OUTER JOIN`
-The OUTER JOIN combines the RIGHT and LEFT JOINS to return all matching records from both tables. This indicates that it will return all of the records from both tables. If there are records in one table without a match, it'll create a record with null values for the other table.
+The FULL OUTER JOIN combines the RIGHT and LEFT JOINS to return all matching records from both tables. This indicates that it will return all of the records from both tables. If there are records in one table without a match, it'll create a record with null values for the other table. This is sometimes referred to as just `FULL JOIN`
 ```
 SELECT
   table1.column_name1 AS new_column_name1,
