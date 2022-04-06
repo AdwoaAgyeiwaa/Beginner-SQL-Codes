@@ -60,9 +60,9 @@ FROM
  table
 ```
 # Aggregating Data
-We can use `JOIN` to aggregate data. JOIN is used to combine rows from two or more tables based on a common or related column. You can think of a JOIN as the SQL version of VLOOKUP in spreadsheets. There are 4 common JOINs used in data aggregation.
-
-## `INNER JOIN`
+## Combining rows from two or more columns using `JOIN`
+We can use the JOIN clause to aggregate data. JOIN is used to combine rows from two or more tables based on a common or related column. You can think of a JOIN as the SQL version of VLOOKUP in spreadsheets. There are 4 common JOINs used in data aggregation:
+### `INNER JOIN`
 An INNER JOIN is a function that returns records with matching values from both tables. To appear in the results table, the records must be key values in each other's tables. When we write INNER JOIN into SQL, the default value is usually JOIN. As a result, JOIN can be used as a shortcut.
 ```
 SELECT
@@ -75,8 +75,7 @@ INNER JOIN
 ON
   table1.matching_column_name = table2.matching_column_name;
 ```
-
-## `LEFT JOIN`
+### `LEFT JOIN`
 A LEFT JOIN function returns all records from the left table and only the matched records from the right table. The table mentioned first is left and the table mentioned second is right. We can also think of left as a table name to the left of the JOIN statement and right as a table name to the right of the JOIN statement. Each row in the left table appears in the results even if there are no matches in the right table.
 ```
 SELECT
@@ -89,8 +88,7 @@ LEFT JOIN
 ON
   table1.matching_column_name = table2.matching_column_name;
 ```
-
-## `RIGHT JOIN`
+### `RIGHT JOIN`
 A RIGHT JOIN function returns all records from the right table and only the matched records from the left table. The table mentioned first is right and the table mentioned second is left. We can also think of right as a table name to the right of the JOIN statement and left as a table name to the left of the JOIN statement. RIGHT JOIN is the exact opposite of LEFT JOIN. You can get the same results if you flip the order of the tables and use a LEFT JOIN.
 ```
 SELECT
@@ -103,8 +101,7 @@ RIGHT JOIN
 ON
   table1.matching_column_name = table2.matching_column_name;
 ```
-
-## `FULL OUTER JOIN`
+### `FULL OUTER JOIN`
 The FULL OUTER JOIN combines the RIGHT and LEFT JOINS to return all matching records from both tables. This indicates that it will return all of the records from both tables. If there are records in one table without a match, it'll create a record with null values for the other table. This is sometimes referred to as just `FULL JOIN`
 ```
 SELECT
@@ -117,3 +114,8 @@ FULL OUTER JOIN
 ON
   table1.matching_column_name = table2.matching_column_name;
 ```
+
+## Grouping Data
+We use the `GROUP BY` command to group rows that have the same values into summary rows, such as "find the number of customers in each country".<br>
+The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.<br>
+The GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.
