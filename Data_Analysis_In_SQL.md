@@ -163,3 +163,5 @@ FROM
 WHERE
   condition;
 ```
+## Aggregating data using subqueries
+# Data Calculations
