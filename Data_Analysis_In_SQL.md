@@ -114,24 +114,6 @@ FULL OUTER JOIN
 ON
   table1.matching_column_name = table2.matching_column_name;
 ```
-
-## Grouping Data
-We use the `GROUP BY` command to group rows that have the same values into summary rows, such as "find the number of customers in each country".<br>
-The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.<br>
-The GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.
-```
-SELECT 
-  column_name(s)
-FROM 
-  table_name
-WHERE
-  condition
-GROUP BY
-  column_name(s)
-ORDER BY
-  column_name(s);
-```
-
 ## Counting Data
 ### Counting all non-null values using `COUNT`
 The `COUNT` aggregate function is used to determine the number of rows in the output. It returns the number of rows that matches a specified criterion in the WHERE clause including duplicate data. It eliminates the NULL values in the output but does not eliminate duplicates of data.
@@ -164,4 +146,30 @@ WHERE
   condition;
 ```
 ## Aggregating data using subqueries
+
 # Data Calculations
+## Queries and calculations
+SELECT
+  column_name1,
+  column_name2,
+  (column_name1 + column_name2) * column_name3 AS column_name4
+## Aggregate functions
+SUM
+AVG
+## Grouping Data
+We use the `GROUP BY` command to group rows that have the same values into summary rows, such as "find the number of customers in each country".<br>
+The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.<br>
+The GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.
+```
+SELECT 
+  column_name(s)
+FROM 
+  table_name
+WHERE
+  condition
+GROUP BY
+  column_name(s)
+ORDER BY
+  column_name(s);
+```
+`EXTRACT` command
