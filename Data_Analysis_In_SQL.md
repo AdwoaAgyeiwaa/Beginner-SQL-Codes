@@ -173,3 +173,7 @@ ORDER BY
   column_name(s);
 ```
 `EXTRACT` command
+# Temporary Tables
+`WITH` command
+`SELECT INTO` command
+`CREATE TABLE` command 
