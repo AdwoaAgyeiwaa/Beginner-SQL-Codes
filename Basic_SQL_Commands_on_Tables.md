@@ -15,7 +15,7 @@ Deletes a table and all of its contents.
 #### Modifying a table
 ALTER TABLE table_name ADD column_name datatype(length of datatype);<br>
 Modifies a table by adding a new column to the already existing table.<br><br>
-ALTER TABLE table_name DROP column_name;<br>
+ALTER TABLE table_name DROP COLUMN column_name;<br>
 Modifies a table by deleting a column from a table.
 
 #### Inserting values into a table
