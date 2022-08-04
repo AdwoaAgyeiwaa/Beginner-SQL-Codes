@@ -145,6 +145,21 @@ FROM
 WHERE
   condition;
 ```
+## The `HAVING` clause
+The `HAVING` clause is used because the `WHERE` keyword cannot be used with aggregate functions.
+```
+SELECT
+  column_name, 
+  aggregate_function(column_name)
+FROM 
+  table_name
+WHERE
+  condition
+GROUP BY
+  column_name
+HAVING
+  aggregate_function(column_name) operator value;
+```
 ## Aggregating data using subqueries
 
 # Data Calculations
