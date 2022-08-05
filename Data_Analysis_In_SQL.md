@@ -164,13 +164,18 @@ HAVING
 
 # Data Calculations
 ## Queries and calculations
+```
 SELECT
   column_name1,
   column_name2,
   (column_name1 + column_name2) * column_name3 AS column_name4
+```
 ## Aggregate functions
-SUM
-AVG
+Aggregators summarize rows into a single value. The most commonly used aggregators are `SUM()`, `COUNT()`, `MAX()`, and `MIN()`.
+### `SUM()` function
+It takes the sum of whatever column you put inside the parentheses.
+### `The COUNT()` function
+It counts the number of entries in whatever column you put inside the parentheses.
 ## Grouping Data
 We use the `GROUP BY` command to group rows that have the same values into summary rows, such as "find the number of customers in each country".<br>
 The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.<br>
@@ -187,8 +192,64 @@ GROUP BY
 ORDER BY
   column_name(s);
 ```
-`EXTRACT` command
+## `EXTRACT` command
+The purpose of the EXTRACT command in a query is to extract a part from a given date. The EXTRACT command can extract any part from a date/time value.
+`SELECT EXTRACT(part FROM date)`
+For example:
+`SELECT EXTRACT(YEAR FROM "2019-08-05")`, `SELECT EXTRACT(WEEK FROM "2019-08-05")`...etc.
+The "part" indicated here could be:
+* MICROSECOND
+* SECOND
+* MINUTE
+* HOUR
+* DAY
+* WEEK
+* MONTH
+* QUARTER
+* YEAR
+* SECOND_MICROSECOND
+* MINUTE_MICROSECOND
+* MINUTE_SECOND
+* HOUR_MICROSECOND
+* HOUR_SECOND
+* HOUR_MINUTE
+* DAY_MICROSECOND
+* DAY_SECOND
+* DAY_MINUTE
+* DAY_HOUR
+* YEAR_MONTH
 # Temporary Tables
-`WITH` command
-`SELECT INTO` command
-`CREATE TABLE` command 
+Temporary tables in a SQL database are NOT stored permanently. They are automatically deleted from the database when your SQL session ends. Multiple queries on this filtered data in the form of temp tables can be run without having to filter the data every time. Temporary tables can be created using different clauses. 
+## `WITH` clause
+```
+WITH
+  new_temp_table_name AS (
+  SELECT *
+  FROM
+    existing_table_name
+  WHERE
+    condition
+)
+```
+## `SELECT INTO` clause
+```
+SELECT *
+INTO
+  new_temp_table_name
+FROM
+  exixting_table_name
+WHERE
+  condition;
+```
+## `CREATE TABLE` clause
+```
+CREATE TABLE new_temp_table_name (or some RDBMS use the `CREATE TEMP TABLE` instead)(
+  column1 data_type,
+  column2 data_type,
+  ...
+)  
+```
+When you're finished with your temporary table, use the `DROP TABLE` clause to remove it from the database:
+```
+DROP TABLE table_name
+```
