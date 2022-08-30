@@ -16,7 +16,7 @@ SELECT
 FROM
  dataset.table_name;
 ```
-The length command helps validate a textstring in a column to check for errors during entry.<br><br>
+The `length` command helps validate a textstring in a column to check for errors during entry.<br><br>
 You can filter out the records that do not meet this validation using the following command:
 ```
 SELECT
@@ -26,7 +26,7 @@ FROM
 WHERE
  LENGTH(table_column_name) doesn't meet condition;
 ```
-You can then account for this error if you prefer not to update the table by using the substring command, "SUBSTr()"<br>
+You can then account for this error if you prefer not to update the table by using the substring command, `SUBSTr()`<br>
 ```
 SELECT
  table_column_name
@@ -44,7 +44,7 @@ FROM
 WHERE
  TRIM(table_column_name) = condition;
 ```
-The "TRIM()" command helps to remove blank spaces before or after a textstring.
+The `TRIM()` command helps to remove blank spaces before or after a textstring.
 
 ### Adding Strings Together
 ```
@@ -53,7 +53,7 @@ SELECT
 FROM
  table
 ```
-The "CONCAT()" command adds stings together to create new text strings that can be used as unique keys.
+The `CONCAT()` command adds stings together to create new text strings that can be used as unique keys.
 
 ### Cleaning Misspelt Strings
 ```
@@ -65,7 +65,7 @@ SELECT
 FROM
  table
 ```
-The "CASE" statement goes through one or more conditions and returns a value as soon as a condition is met.
+The `CASE` statement goes through one or more conditions and returns a value as soon as a condition is met.
 
 
 # Cleaning Integer Variables
@@ -88,7 +88,7 @@ SELECT
 FROM
  table;
 ```
-The "CAST()" command can be used to convert anything from one data type to another.
+The `CAST()` command can be used to convert anything from one data type to another.
 
 ### Returning Non-Null Values in a List
 ```
@@ -97,4 +97,4 @@ SELECT
 FROM
  table;
 ```
-The "COALESCE()"command can be used to return non-null values in a list.
+The `COALESCE()` command can be used to return non-null values in a list.
