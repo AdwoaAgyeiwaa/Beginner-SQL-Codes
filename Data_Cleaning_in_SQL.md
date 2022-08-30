@@ -1,10 +1,12 @@
 #### Cleaning String Variables
 
 ##### Removing Duplicates
-SELECT<br>
- DISTINCT table_column_name<br>
-FROM<br>
- dataset.table_name;<br>
+```
+SELECT
+ DISTINCT table_column_name
+FROM
+ dataset.table_name;
+ ```
 Including DISTINCT in SELECT statement removes duplicates.
 
 ##### Checking the Length of a Textstring in a Column
