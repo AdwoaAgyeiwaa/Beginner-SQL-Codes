@@ -59,9 +59,9 @@ The `CONCAT()` command adds stings together to create new text strings that can 
 ```
 SELECT
  CASE
-  WHEN column_name = 'wrong_value' THEN 'correct_value'<br>
-  ELSE column_name<br>
-  END AS cleaned_name<br>
+  WHEN column_name = 'wrong_value' THEN 'correct_value'
+  ELSE column_name
+  END AS cleaned_name
 FROM
  table
 ```
