@@ -7,21 +7,25 @@ SELECT
 FROM
  dataset.table_name;
  ```
-Including DISTINCT in SELECT statement removes duplicates.
+Including `DISTINCT` in `SELECT` statement removes duplicates.
 
 ##### Checking the Length of a Textstring in a Column
-SELECT<br>
- LENGTH(table_column_name)<br>
-FROM<br>
- dataset.table_name;<br>
+```
+SELECT
+ LENGTH(table_column_name)
+FROM
+ dataset.table_name;
+```
 The length command helps validate a textstring in a column to check for errors during entry.<br><br>
-You can filter out the records that do not meet this validation using the following command:<br>
+You can filter out the records that do not meet this validation using the following command:
+```
 SELECT<br>
  table_column_name<br>
 FROM<br>
  dataset.table_name;<br>
 WHERE<br>
  LENGTH(table_column_name) doesn't meet condition;<br><br>
+```
 You can then account for this error if you prefer not to update the table by using the substring command, "SUBSTr()"<br>
 SELECT<br>
  table_column_name<br>
