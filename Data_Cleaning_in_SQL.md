@@ -16,7 +16,7 @@ SELECT
 FROM
  dataset.table_name;
 ```
-The `length` command helps validate a textstring in a column to check for errors during entry.<br><br>
+The `LENGTH` command helps validate a textstring in a column to check for errors during entry.<br><br>
 You can filter out the records that do not meet this validation using the following command:
 ```
 SELECT
@@ -33,7 +33,7 @@ SELECT
 FROM
  dataset.table_name;
 WHERE
- SUBSTR(table_column_name,number of letter to in textstring to start with,number of letters to pull out) = condition;
+ SUBSTR(table_column_name,number of letter in textstring to start with,number of letters to pull out) = condition;
 ``` 
 ### Removing Spaces in a Textstring
 ```
