@@ -193,10 +193,10 @@ ORDER BY
   column_name(s);
 ```
 ## `EXTRACT` command
-The purpose of the EXTRACT command in a query is to extract a part from a given date. The EXTRACT command can extract any part from a date/time value.
-`SELECT EXTRACT(part FROM date)`
-For example:
-`SELECT EXTRACT(YEAR FROM "2019-08-05")`, `SELECT EXTRACT(WEEK FROM "2019-08-05")`...etc.
+The purpose of the EXTRACT command in a query is to extract a part from a given date. The EXTRACT command can extract any part from a date/time value.<br>
+`SELECT EXTRACT(part FROM date)`<br>
+For example:<br>
+`SELECT EXTRACT(YEAR FROM "2019-08-05")`, `SELECT EXTRACT(WEEK FROM "2019-08-05")`...etc.<br>
 The "part" indicated here could be:
 * MICROSECOND
 * SECOND
